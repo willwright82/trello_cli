@@ -11,7 +11,7 @@ module TrelloCli
 
       def to_tsv
         data.map do |d|
-          [d[:id], d[:name], d[:desc]].join("\t") + "\n"
+          [d[:id], '[' + d[:url].gsub('https://trello.com/c/', '') + '] ' + d[:name] + ' — ' + d[:url]].join("\t") + "\n"
         end
       end
     end

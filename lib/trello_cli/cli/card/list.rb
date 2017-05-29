@@ -11,7 +11,7 @@ module TrelloCli
           option_parser.parse!
 
           data = list_cards.map do |c|
-            { name: c.name, id: c.id, desc: c.desc }
+            { name: c.name, id: c.id, desc: c.desc, url: c.short_url }
           end
 
           puts TrelloCli::Formatters::CardList.new(data).output(@options[:output])

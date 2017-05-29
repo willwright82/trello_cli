@@ -6,13 +6,16 @@ Simple Ruby Trello Command Line Interface
 
 ## Installation
 
-Install the trello_cli gem
+You have 2 options:
+
+1. Install the default trello_cli gem
 
     gem install trello_cli
 
-Or install using docker via the instructions provided by **@jamesmstone**.
+2. clone this repository, cd into it and run
 
-    docker pull jamesmstone/trello
+    bundle install && rake build && gem install pkg/trello_cli-0.4.1.gem
+
 
 ## Setup
 
